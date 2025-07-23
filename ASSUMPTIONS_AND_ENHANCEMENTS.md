@@ -1,5 +1,3 @@
----
-
 # 📄 Assumptions and Future Enhancements
 
 ## Assumptions
