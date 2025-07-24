@@ -38,10 +38,10 @@ export const CreatePaymentSchema = z.object({
     .trim()
     .min(1, 'Currency must be a non-empty string')
     .transform(val => val.toUpperCase())
-}).strict() // Reject unknown properties to match original behavior
+}).strict()
 .refine(
   (data) => {
-    // Additional validation to ensure amount and currency exist (matches original null/undefined checks)
+    // Additional validation to ensure amount and currency exist
     return data.amount !== undefined && data.amount !== null && data.currency;
   },
   { message: 'Valid payment object is required' }

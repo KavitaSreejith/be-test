@@ -1,5 +1,4 @@
 
-// src/config/constants.ts
 export const CONFIG = {
     AWS: {
       REGION: process.env.AWS_REGION || 'ap-southeast-2',
